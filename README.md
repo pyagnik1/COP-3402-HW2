@@ -8,10 +8,10 @@
 #### Files needed to run the lexical analyser: input.txt lexoutput.txt
 
 
-
+<div class="text-green mb-2 ml-4">
 #### To run the lexical analyser type:
 ---
-<div class="text-green mb-2 ml-4">
+
 ``` 
  gcc main.c
  ./a.out
