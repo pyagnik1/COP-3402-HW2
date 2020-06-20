@@ -1,10 +1,15 @@
+//Parth Yagnik
+//Michael Kuo
+//COP 3402
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 
 //For Reserved Words
-const char* reservedWords[] = {"const", "var", "procedure", "call", "begin", "end", "if", "then", "else", "while", "do", "read", "write", "odd", "{", "}"};
+const char* reservedWords[] = {"const", "var", "procedure", "call", "begin", "end", "if", "then", "else", "while", "do", "read", "write", "odd"};
 
 
 const char spcialSymbols[] = {'+', '-', '*', '/', '(', ')', '=', ',' , '.', '<', '>',  ';' , ':', '{', '}'};
@@ -23,24 +28,16 @@ typedef enum {
   ifsym = 23, thensym = 24, whilesym = 25, dosym = 26, callsym = 27, constsym = 28,
   varsym = 29, procsym = 30, writesym = 31, readsym = 32, elsesym = 33
 } token;
-const char *lexSym[] = { "", "nulsym", "identsym", "numbersym", "+", "-",
-                         "*",  "/", "odd", "=", "!=", "<=", "<",
-                         ">", ">=", "(", ")", ",", ";",
-                         ".", ":=", "{", "}""begin", "end", "if", "then",
-                         "while", "do", "call", "const", "var", "procedure", "write",
-                         "read" , "else"
-                       };
+const char *lexSym[] = { "", "nulsym", "identsym", "numbersym", "+", "-", "*", "/", "odd", "=", "!=", "<", "=<", ">", ">=", "(", ")", ",", ";", ".", ":=", "{", "}", "if", "then", "while", "do", "call", "const", "var", "procedure", "write", "read", "else"};
 
 typedef struct {
   token token;
   int numValue;
   char name[12];
-  
 } tokenStruct;
 
 tokenStruct List[5000];
 int Listidx = 0 ;
-
 
 int main (int argc, char *argv[]) {
 
@@ -51,17 +48,11 @@ int main (int argc, char *argv[]) {
     List[a].token = 0;
   }
 
-
   FILE* infile;
   FILE* outfile;
 
-
-
   infile = fopen("input.txt", "r");
   outfile = fopen("lexoutput.txt", "w");
-
-
-
 
   int j = 0, k = 0;
 
@@ -77,13 +68,11 @@ int main (int argc, char *argv[]) {
     printf("%c", ch);
   }
 
-
-
   infile = fopen("input.txt", "r");
   ch = fgetc(infile);
 
   while (ch != EOF && errora == 0) {
-		//remove spaces
+    //remove spaces
     if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\n') {
       ch = fgetc(infile);
       peakAheah = 0;
@@ -231,7 +220,7 @@ int main (int argc, char *argv[]) {
     else {
       peakAheah = 0;
       int spc = -1;
-      for (i = 0; i < 13; i++) {
+      for (i = 0; i < 15; i++) {
         if (ch == spcialSymbols[i]) {
           spc = i;
         }
@@ -284,6 +273,7 @@ int main (int argc, char *argv[]) {
           List[Listidx].token = lparentsym;
           Listidx++;
           break;
+
 
         case 5:
           List[Listidx].token = rparentsym;
@@ -352,13 +342,23 @@ int main (int argc, char *argv[]) {
 
 
           else {
-           
+
           }
+          break;
+
+        case 13:
+          List[Listidx].token = lbracesym;
+          Listidx++;
+          break;
+
+        case 14:
+          List[Listidx].token = rbracesym;
+          Listidx++;
           break;
 
 
         default:
-					// printf("Error Invalid symbols.\n");
+          printf("Error Invalid symbols.\n");
           break;
       }
     }
