@@ -27,5 +27,5 @@
 ```
 diff "filename".txt "comparefile".txt
 ```
-######## Due: 6/19/2020
+###### Due: 6/19/2020
 <p>Parth Yagnik&trade;<p>
