@@ -6,7 +6,7 @@
 
 
  Files needed to run the lexical analyser|
- ----------------------------------------
+ ----------------------------------------|
  input.txt |
  lexoutput.txt|
  
