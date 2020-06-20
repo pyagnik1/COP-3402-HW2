@@ -1,7 +1,7 @@
 # Lexical Analyzer
 ---
 
-### Parth Yagnik
+### @Parth Yagnik
 ### Due: 6/19/2020
 
 
@@ -12,8 +12,8 @@
 #### To run the lexical analyser type:
 ---
 ``` 
-gcc main.c
-./a.out
++ gcc main.c
++ ./a.out
 ```
 
 #### If you wish to have directed to a perticular file type:
