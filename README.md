@@ -1,7 +1,7 @@
 # Lexical Analyzer
 ---
 
-### @Parth Yagnik
+
 ### Due: 6/19/2020
 
 
@@ -26,3 +26,4 @@
 ```
 diff "filename".txt "comparefile".txt
 ```
+<p>&copy; Parth Yagnik<p>
