@@ -2,10 +2,9 @@
 ---
 
 
-### Due: 6/19/2020
 
 
- Files needed to run the lexical analyser|
+#### Files needed to run the lexical analyser|
  ----------------------------------------|
  input.txt |
  lexoutput.txt|
@@ -30,4 +29,5 @@
 ```
 diff "filename".txt "comparefile".txt
 ```
+###### Due: 6/19/2020
 <p>Parth Yagnik&trade;<p>
