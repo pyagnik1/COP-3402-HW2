@@ -5,11 +5,11 @@
 ### Due: 6/19/2020
 
 
-Files needed to run the lexical analyser: input.txt lexoutput.txt
+#### Files needed to run the lexical analyser: input.txt lexoutput.txt
 
 
 
-To run the lexical analyser type 
+#### To run the lexical analyser type:
 ``` 
 gcc main.c
 ./a.out
