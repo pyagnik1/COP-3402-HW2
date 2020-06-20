@@ -26,4 +26,4 @@
 ```
 diff "filename".txt "comparefile".txt
 ```
-<p>&trade;; Parth Yagnik<p>
+<p>Parth Yagnik&trade;<p>
