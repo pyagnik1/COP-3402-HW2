@@ -11,11 +11,12 @@
 
 #### To run the lexical analyser type:
 ---
+<div class="text-green mb-2 ml-4">
 ``` 
-+ gcc main.c
-+ ./a.out
+ gcc main.c
+ ./a.out
 ```
-
+</div>
 #### If you wish to have directed to a perticular file type:
 ---
 ```
