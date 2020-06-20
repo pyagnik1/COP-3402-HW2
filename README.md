@@ -2,9 +2,9 @@
 ---
 
 
+###### Due: 6/19/2020
 
-
-#### Files needed to run the lexical analyser|
+ Files needed to run the lexical analyser|
  ----------------------------------------|
  input.txt |
  lexoutput.txt|
